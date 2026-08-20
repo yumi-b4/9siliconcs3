@@ -9,5 +9,5 @@ S.Y. 2026 - 2027
   
   [My Chinese Zodiac Activity](q1/zodiacSiliconBaclagan.py)
 
-  [Sari-Sari Store OOP](q1/ila_OOP.md)
+  [Sari-Sari Store_OOP](q1/ila_OOP.md)
   
