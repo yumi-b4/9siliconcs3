@@ -5,9 +5,9 @@
 S.Y. 2026 - 2027
 
 ## Quarter 1
-  [Computational Thinking Skills](ctskillsSiliconBaclagan)
+  [Computational Thinking Skills](q1/ctskillsSiliconBaclagan)
   
-  [Chinese Zodiac](zodiacSiliconBaclagan.py)
+  [Chinese Zodiac](q1/zodiacSiliconBaclagan.py)
 
-  [Sari-Sari Store_OOP](ila_OOP.md)
+  [Sari-Sari Store_OOP](q1/ila_OOP.md)
   
