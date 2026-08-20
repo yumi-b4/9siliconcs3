@@ -8,3 +8,6 @@ S.Y. 2026 - 2027
   [View my Computational Thinking Exercise](q1/ctskillsSiliconBaclagan.md)
   
   [My Chinese Zodiac Activity](q1/zodiacSiliconBaclagan.py)
+
+  [Sari-Sari Store OOP](q1/ila_OOP.md)
+  
