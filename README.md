@@ -7,4 +7,4 @@ S.Y. 2026 - 2027
 ## Quarter 1
   [View my Computational Thinking Exercise](q1/ctskillsSiliconBaclagan.md)
   
-  [My Chinese Zodiac Activity](zodiacSiliconBaclagan.py)
+  [My Chinese Zodiac Activity](q1/zodiacSiliconBaclagan.py)
