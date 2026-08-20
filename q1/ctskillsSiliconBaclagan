@@ -1,0 +1,52 @@
+# Computational Thinking Exercise
+## [Smart Vending Machine]
+Maria Caomi 
+9-Silicon
+Baclagan
+Aug 20, 2026
+
+##Step 1: Identify the Big Problem
+##Main Problem
+
+The vending machine needs to improve its purchasing process, as there are  problems shown such as having trouble choosing specific  items and accepting the correct buttons. The machine also gets slow after being used for a while, and gives a hard time for students to know which items are available. 
+
+##Step 2: Identify the Sub-Problems 
+
+1. It presents incorrect change where the machine has the capability of entering wrong amounts and wrong computations. 
+2. The vending machine lacks in properly notifying students when an item is not available 
+3. Within the selections, sometimes pressing a button can still give a different item from the one that a student selected
+4. Students are not able to process transactions with multiple items
+
+##Step 3: Apply Computational Thinking Skills
+
+1. Creating the correct change (Algorithm Design):
+Provide a step-by-step procedure on how the vending machine can correctly compute the payment in every purchase
+2. Handling available items
+(Pattern Recognition):
+Review the inventory, whether is still contains specific items or tells which items are not in stock
+3. Preventing mistakes in item selections (Abstraction):
+We should focus on the important problems where it was broken down into smaller pieces for easier understanding
+4. Lack of capability in processing multiple selections (Decomposition):
+Break the big problem into smaller steps. From selecting the item, to checking the availability, and calculating the payments, up to the dispensing of the items.
+
+##Step 4: Algorithmic Solution
+
+START
+    DISPLAY "Available Items"
+    INPUT chosen_item
+
+    SET item_price = GET_PRICE(chosen_item)
+
+    INPUT payment_given
+
+    IF payment_given < item_price THEN
+        DISPLAY "Payment is not enough."
+        DISPLAY "Returning payment: ", payment_given
+    ELSE 
+        SET change = payment_given - chosen_item
+        DISPLAY "Dispensing item"
+        DISPLAY "Returning change: ", change
+    ENDIF
+END
+
+
