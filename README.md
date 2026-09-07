@@ -13,3 +13,5 @@ S.Y. 2026 - 2027
   
   [OOPAct_Part1](q1/classObjectULM.md)
  
+  [OOPAct_Part2](q1/classAttributesMethods.md)
+  
