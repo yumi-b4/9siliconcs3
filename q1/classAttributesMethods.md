@@ -24,7 +24,7 @@ I kept the name, creator, count and duration as part of the Playlist class.
 
 
 ## Updated UML Class Diagram 
-![classDiagram](imagesclassDiagramSG5.png)
+![Class Diagram](imagesclassDiagramSG5.png)
 
 
 
@@ -87,8 +87,7 @@ print("Playlist 2:")
 playlist2.display_playlist()
 
 ## Test Run 
-![Test Run](<Screenshot 2026-09-08 054002.png>)
-
+![Test Run](<Screenshot 2026-09-12 002741-1.png>)
 
 ## Object Diagram 
 ![Object Diagram](objectDiagram.png.png)

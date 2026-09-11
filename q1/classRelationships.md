@@ -25,6 +25,7 @@ Explanation: A playlist can contain zero or more songs, which fits the system si
 
 ## Python Implementation
 
+class Song:
     def __init__(self, title, artist, duration):
         self.title = title
         self.artist = artist
@@ -64,55 +65,56 @@ class Playlist:
             print("-", song.title, "by", song.artist)
 
     def display_playlist(self):
-...         print("Title:", self.title)
-...         print("Total Duration:", self.totalDuration, "minutes")
-...         print("Creator:", self.creator)
-...         print("Song Count:", self.__songCount)
-... 
-...     def get_song_count(self):
-...         return self.__songCount
-... 
-... 
-... # Create Playlist object
-... playlist1 = Playlist("Study Playlist", 120.5, "Maria", 10)
-... 
-... # Create Song objects
-... song1 = Song("Until I Found You", "Stephen Sanchez", 2.57)
-... song2 = Song("Dandelions", "Ruth B.", 3.53)
-... song3 = Song("Snooze", "SZA", 3.22)
-... 
-... 
-... # BEFORE ASSOCIATION
-... print("--- BEFORE ASSOCIATION ---")
-... playlist1.display_playlist()
-... 
-... print("Songs connected:", len(playlist1.songs))
-... 
-... 
-... # BUILDING RELATIONSHIP
-... print("\n--- BUILDING RELATIONSHIP ---")
-... print("Adding songs to Playlist...")
-... 
-... playlist1.add_song(song1)
-... playlist1.add_song(song2)
-... playlist1.add_song(song3)
-... 
-... 
-... # AFTER ASSOCIATION
-... print("\n--- AFTER ASSOCIATION ---")
-... playlist1.display_playlist()
-... 
-... print("\nRelated songs:")
-... 
-... for song in playlist1.songs:
-...     print("-", song.title, "by", song.artist)
-... 
-... 
-... # PLAY PLAYLIST
-... print("\n--- PLAYLIST ---")
+        print("Title:", self.title)
+        print("Total Duration:", self.totalDuration, "minutes")
+        print("Creator:", self.creator)
+        print("Song Count:", self.__songCount)
+
+    def get_song_count(self):
+        return self.__songCount
+
+
+# Create Playlist object
+playlist1 = Playlist("Study Playlist", 120.5, "Yumi", 10)
+
+# Create Song objects
+song1 = Song("Until I Found You", "Stephen Sanchez", 2.57)
+song2 = Song("Dandelions", "Ruth B.", 3.53)
+song3 = Song("Snooze", "SZA", 3.22)
+
+
+# BEFORE ASSOCIATION
+print("--- BEFORE ASSOCIATION ---")
+playlist1.display_playlist()
+
+print("Songs connected:", len(playlist1.songs))
+
+
+# BUILDING RELATIONSHIP
+print("\n--- BUILDING RELATIONSHIP ---")
+print("Adding songs to Playlist...")
+
+playlist1.add_song(song1)
+playlist1.add_song(song2)
+playlist1.add_song(song3)
+
+
+# AFTER ASSOCIATION
+print("\n--- AFTER ASSOCIATION ---")
+playlist1.display_playlist()
+
+print("\nRelated songs:")
+
+for song in playlist1.songs:
+    print("-", song.title, "by", song.artist)
+
+
+# PLAY PLAYLIST
+print("\n--- PLAYLIST ---")
+playlist1.play_playlist()
 
 ## Test Run 
-![TestRun](<Screenshot 2026-09-12 002741.png>)
+![Test Run](<Screenshot 2026-09-12 014126.png>)
 
 ## Object Relationship Diagram
 
