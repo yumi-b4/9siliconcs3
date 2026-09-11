@@ -1,8 +1,8 @@
 ## Class Relationships: Association and Multiplicity
 ## Previous Work 
 
- [OOPAct_Part1](q1/classObjectULM.md)
- [OOPAct_Part2](q1/classAttributesMethods.md)
+ [q1/classObjectUML.md](q1/classObjectULM.md)
+ [q1/classAttributesMethods.md](q1/classAttributesMethods.md)
 
 ## Existing Class
 Class: Playlist 
@@ -21,13 +21,98 @@ Multiplicity: 1 : 0..*
 Explanation: A playlist can contain zero or more songs, which fits the system since a playlist can have different songs, and the number of songs can vary depending on the playlist. 
 
 ## UML Class Relationship Diagram 
-![Class Relationship Diagram](images/classRelationshipDiagram.png)
+![ClassRelationshipDiagram](<Class Relationship Diagram.png>)
 
 ## Python Implementation
-[View Python Source](classRelationship.py)
+
+    def __init__(self, title, artist, duration):
+        self.title = title
+        self.artist = artist
+        self.duration = duration
+
+    def display_song(self):
+        print("Song:", self.title)
+        print("Artist:", self.artist)
+        print("Duration:", self.duration, "minutes")
+
+
+class Playlist:
+    def __init__(self, title, totalDuration, creator, songCount):
+        self.title = title
+        self.totalDuration = totalDuration
+        self.creator = creator
+        self.__songCount = songCount
+        self.songs = []
+
+    def add_song(self, song):
+        self.songs.append(song)
+        self.__songCount += 1
+        self.totalDuration += song.duration
+
+    def remove_song(self, song):
+        if song in self.songs:
+            self.songs.remove(song)
+            self.__songCount -= 1
+            self.totalDuration -= song.duration
+        else:
+            print("Song is not in the playlist.")
+
+    def play_playlist(self):
+        print("Playing:", self.title)
+
+        for song in self.songs:
+            print("-", song.title, "by", song.artist)
+
+    def display_playlist(self):
+...         print("Title:", self.title)
+...         print("Total Duration:", self.totalDuration, "minutes")
+...         print("Creator:", self.creator)
+...         print("Song Count:", self.__songCount)
+... 
+...     def get_song_count(self):
+...         return self.__songCount
+... 
+... 
+... # Create Playlist object
+... playlist1 = Playlist("Study Playlist", 120.5, "Maria", 10)
+... 
+... # Create Song objects
+... song1 = Song("Until I Found You", "Stephen Sanchez", 2.57)
+... song2 = Song("Dandelions", "Ruth B.", 3.53)
+... song3 = Song("Snooze", "SZA", 3.22)
+... 
+... 
+... # BEFORE ASSOCIATION
+... print("--- BEFORE ASSOCIATION ---")
+... playlist1.display_playlist()
+... 
+... print("Songs connected:", len(playlist1.songs))
+... 
+... 
+... # BUILDING RELATIONSHIP
+... print("\n--- BUILDING RELATIONSHIP ---")
+... print("Adding songs to Playlist...")
+... 
+... playlist1.add_song(song1)
+... playlist1.add_song(song2)
+... playlist1.add_song(song3)
+... 
+... 
+... # AFTER ASSOCIATION
+... print("\n--- AFTER ASSOCIATION ---")
+... playlist1.display_playlist()
+... 
+... print("\nRelated songs:")
+... 
+... for song in playlist1.songs:
+...     print("-", song.title, "by", song.artist)
+... 
+... 
+... # PLAY PLAYLIST
+... print("\n--- PLAYLIST ---")
 
 ## Test Run 
-!
+![TestRun](<Screenshot 2026-09-12 002741.png>)
 
 ## Object Relationship Diagram
 
