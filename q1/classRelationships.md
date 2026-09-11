@@ -24,94 +24,91 @@ Explanation: A playlist can contain zero or more songs, which fits the system si
 ![ClassRelationshipDiagram](<Class Relationship Diagram.png>)
 
 ## Python Implementation
+    
+    class Song:
+        def __init__(self, title, artist, duration):
+            self.title = title
+            self.artist = artist
+            self.duration = duration
 
-class Song:
-    def __init__(self, title, artist, duration):
-        self.title = title
-        self.artist = artist
-        self.duration = duration
-
-    def display_song(self):
-        print("Song:", self.title)
-        print("Artist:", self.artist)
-        print("Duration:", self.duration, "minutes")
-
-
-class Playlist:
-    def __init__(self, title, totalDuration, creator, songCount):
-        self.title = title
-        self.totalDuration = totalDuration
-        self.creator = creator
-        self.__songCount = songCount
-        self.songs = []
-
-    def add_song(self, song):
-        self.songs.append(song)
-        self.__songCount += 1
-        self.totalDuration += song.duration
-
-    def remove_song(self, song):
-        if song in self.songs:
-            self.songs.remove(song)
-            self.__songCount -= 1
-            self.totalDuration -= song.duration
-        else:
-            print("Song is not in the playlist.")
-
-    def play_playlist(self):
-        print("Playing:", self.title)
-
-        for song in self.songs:
-            print("-", song.title, "by", song.artist)
-
-    def display_playlist(self):
-        print("Title:", self.title)
-        print("Total Duration:", self.totalDuration, "minutes")
-        print("Creator:", self.creator)
-        print("Song Count:", self.__songCount)
-
-    def get_song_count(self):
-        return self.__songCount
+        def display_song(self):
+            print("Song:", self.title)
+            print("Artist:", self.artist)
+            print("Duration:", self.duration, "minutes")
 
 
-# Create Playlist object
-playlist1 = Playlist("Study Playlist", 120.5, "Yumi", 10)
+    class Playlist:
+        def __init__(self, title, totalDuration, creator, songCount):
+            self.title = title
+            self.totalDuration = totalDuration
+            self.creator = creator
+            self.__songCount = songCount
+            self.songs = []
 
-# Create Song objects
-song1 = Song("Until I Found You", "Stephen Sanchez", 2.57)
-song2 = Song("Dandelions", "Ruth B.", 3.53)
-song3 = Song("Snooze", "SZA", 3.22)
+        def add_song(self, song):
+            self.songs.append(song)
+            self.__songCount += 1
+            self.totalDuration += song.duration
+
+        def remove_song(self, song):
+            if song in self.songs:
+                self.songs.remove(song)
+                self.__songCount -= 1
+                self.totalDuration -= song.duration
+            else:
+                print("Song is not in the playlist.")
+
+        def play_playlist(self):
+            print("Playing:", self.title)
+
+            for song in self.songs:
+                print("-", song.title, "by", song.artist)
+
+        def display_playlist(self):
+            print("Title:", self.title)
+            print("Total Duration:", self.totalDuration, "minutes")
+            print("Creator:", self.creator)
+            print("Song Count:", self.__songCount)
+
+        def get_song_count(self):
+            return self.__songCount
 
 
-# BEFORE ASSOCIATION
-print("--- BEFORE ASSOCIATION ---")
-playlist1.display_playlist()
+    playlist1 = Playlist("Study Playlist", 120.5, "Maria", 10)
 
-print("Songs connected:", len(playlist1.songs))
-
-
-# BUILDING RELATIONSHIP
-print("\n--- BUILDING RELATIONSHIP ---")
-print("Adding songs to Playlist...")
-
-playlist1.add_song(song1)
-playlist1.add_song(song2)
-playlist1.add_song(song3)
+    song1 = Song("Until I Found You", "Stephen Sanchez", 2.57)
+    song2 = Song("Dandelions", "Ruth B.", 3.53)
+    song3 = Song("Snooze", "SZA", 3.22)
 
 
-# AFTER ASSOCIATION
-print("\n--- AFTER ASSOCIATION ---")
-playlist1.display_playlist()
+    print("--- BEFORE ASSOCIATION ---")
+    playlist1.display_playlist()
 
-print("\nRelated songs:")
-
-for song in playlist1.songs:
-    print("-", song.title, "by", song.artist)
+    print("Songs connected:", len(playlist1.songs))
 
 
-# PLAY PLAYLIST
-print("\n--- PLAYLIST ---")
-playlist1.play_playlist()
+    print("\n--- BUILDING RELATIONSHIP ---")
+    print("Adding songs to Playlist...")
+
+    playlist1.add_song(song1)
+    playlist1.add_song(song2)
+    playlist1.add_song(song3)
+
+
+    print("\n--- AFTER ASSOCIATION ---")
+    playlist1.display_playlist()
+
+    print("\nRelated songs:")
+
+    for song in playlist1.songs:
+        print("-", song.title, "by", song.artist)
+
+
+    print("\n--- PLAYLIST ---")
+    playlist1.play_playlist()
+```
+
+
 
 ## Test Run 
 ![Test Run](<Screenshot 2026-09-12 014126.png>)
