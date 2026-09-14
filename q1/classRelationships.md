@@ -56,7 +56,7 @@ class Playlist:
             self.__songCount -= 1
             self.totalDuration -= song.duration
         else:
-            print("Song is not in the playlist.")
+            print("Song does not belong in the playlist.")
 
     def play_playlist(self):
         print("Playing:", self.title)
@@ -75,23 +75,23 @@ class Playlist:
 
 
 # Create Playlist object
-playlist1 = Playlist("Study Playlist", 120.5, "Maria", 10)
+playlist1 = Playlist("Study Playlist", 122.5, "Yumi", 10)
 
 # Create Song objects
-song1 = Song("Until I Found You", "Stephen Sanchez", 2.57)
-song2 = Song("Dandelions", "Ruth B.", 3.53)
-song3 = Song("Snooze", "SZA", 3.22)
+song1 = Song("Beutiful", "Bazzi, Camila Cabello", 3:00)
+song2 = Song("Sober", "Bazzi", 3.44)
+song3 = Song("XXL", "LANY", 3:26)
 
 
 # BEFORE ASSOCIATION
-print("--- BEFORE ASSOCIATION ---")
+print("-BEFORE ASSOCIATION-")
 playlist1.display_playlist()
 
 print("Songs connected:", len(playlist1.songs))
 
 
 # BUILDING RELATIONSHIP
-print("\n--- BUILDING RELATIONSHIP ---")
+print("\n- BUILDING RELATIONSHIP-")
 print("Adding songs to Playlist...")
 
 playlist1.add_song(song1)
@@ -100,7 +100,7 @@ playlist1.add_song(song3)
 
 
 # AFTER ASSOCIATION
-print("\n--- AFTER ASSOCIATION ---")
+print("\n-AFTER ASSOCIATION-")
 playlist1.display_playlist()
 
 print("\nRelated songs:")
@@ -110,7 +110,7 @@ for song in playlist1.songs:
 
 
 # PLAY PLAYLIST
-print("\n--- PLAYLIST ---")
+print("\n-PLAYLIST-")
 playlist1.play_playlist()
 ```
 
@@ -119,7 +119,7 @@ playlist1.play_playlist()
 ![TestRun](<Screenshot 2026-09-12 014126.png>)
 
 ## Object Relationship Diagram
-
+![Object Relationship Diagram](<Class Relationship Diagram.png>)
 
 ## Analysis 
 

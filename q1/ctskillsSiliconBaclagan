@@ -33,17 +33,17 @@ Break the big problem into smaller steps. From selecting the item, to checking t
 
 START
     DISPLAY "Available Items"
-    INPUT chosen_item
+    INPUT chosen_itm
 
-    SET item_price = GET_PRICE(chosen_item)
+    SET item_price = GET_PRICE(chosen_itm)
 
     INPUT payment_given
 
-    IF payment_given < item_price THEN
+    IF amount_given < item_price THEN
         DISPLAY "Payment is not enough."
         DISPLAY "Returning payment: ", payment_given
     ELSE 
-        SET change = payment_given - chosen_item
+        SET change =amount_given - chosen_itm
         DISPLAY "Dispensing item"
         DISPLAY "Returning change: ", change
     ENDIF
