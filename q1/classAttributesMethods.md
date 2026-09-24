@@ -35,14 +35,14 @@ class Playlist:
         self.name = name
         self.genre = genre
         self.totalDuration = totalDuration
-        self.song_count = song_count
+        self.__song_count = song_count
 
     def add_song(self):
-        self.song_count += 1
+        self.__song_count += 1
 
     def remove_song(self):
-        if self.song_count > 0:
-            self.song_count -= 1
+        if self.__song_count > 0:
+            self.__song_count -= 1
         else:
             print("Cannot remove more songs than the playlist contains.")
 
@@ -51,14 +51,14 @@ class Playlist:
 
 
 # Object
-playlistYumi = Playlist("BazziTop", "Pop", 158.0, 63)
+playlistYumi = Playlist("LAUV_ontop", "Pop", 132.5, 15)
 
 
 # Use the object
 print("name:", playlistYumi.name)
 print("genre:",playlistYumi.genre)
 print("total duration:", playlistYumi.totalDuration)
-print("song count:", playlistYumi.song_count)
+print("song count:", playlistYumi.__song_count)
 
 playlistYumi.add_song()
 playlistYumi.remove_song()
@@ -67,10 +67,10 @@ playlistYumi.play_playlist()
 
 
 ## Test Run 
-![Test Run](<Screenshot 2026-09-24 161449-1.png>)
+![TestRun_cA](image.png)
 
 ## Object Diagram 
-![Object Diagram](objectDiagram.png-1.png)
+![cA_objectdiagram](image-1.png)
 
 ## Analysis 
 ### What did you make your chosen attribute private?

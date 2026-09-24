@@ -1,4 +1,5 @@
 ## Class Relationships: Association and Multiplicity
+
 ## Previous Work 
 
  [q1/classObjectUML.md](q1/classObjectULM.md)
@@ -21,17 +22,70 @@ Multiplicity: 1 : 0..*
 Explanation: A playlist can contain zero or more songs, which fits the system since a playlist can have different songs, and the number of songs can vary depending on the playlist. 
 
 ## UML Class Relationship Diagram 
-![ClassRelationshipDiagram](<Class Relationship Diagram.png>)
+![cR_UMLClassRelationshipDiagram](<Screenshot 2026-09-24 164845.png>)
 
 ## Python Implementation
- 
+class Song:
+
+    def __init__(self, title, artist, duration):
+        self.title = title
+        self.artist = artist
+        self.duration = duration
+
+
+class Playlist:
+
+    def __init__(self, name, genre, total_duration, song_count):
+        self.name = name
+        self.genre = genre
+        self.totalDuration = total_duration
+        self.songs = []
+
+    def add_song(self, song):
+        self.songs.append(song)
+
+    def remove_song(self, song):
+        if song in self.songs:
+            self.songs.remove(song)
+        else:
+            print("Song is not in the playlist.")
+
+    def play_playlist(self):
+        print("Playing playlist:", self.name)
+
+
+# Song Objects
+song1 = Song("Beautiful", "Bazzi", 3.0)
+song2 = Song("Sober", "Bazzi", 4.0)
+
+
+# Playlist Objects
+playlistYumi = Playlist("LAUV_ontop", "Pop", 0, 0)
+
+playlistYumi.add_song(song1)
+playlistYumi.add_song(song2)
+
+print("name:", playlistYumi.name)
+print("genre:", playlistYumi.genre)
+print("total duration:", playlistYumi.totalDuration)
+
+
+print("Songs:")
+
+for song in playlistYumi.songs:
+    print(song.title, "-", song.artist, "-", song.duration)
+
+print("song count:", len(playlistYumi.songs))
+
+
+playlistYumi.play_playlist()
 
 
 ## Test Run 
 
 
 ## Object Relationship Diagram
-![Object Relationship Diagram](<Class Relationship Diagram.png>)
+
 
 ## Analysis 
 
