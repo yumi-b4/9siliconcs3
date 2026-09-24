@@ -11,8 +11,12 @@ S.Y. 2026 - 2027
 
   [Sari-Sari Store_OOP](q1/ila_oop.md)
   
-  [OOPAct_Part1](q1/classObjectULM.md)
+  [OOPAct_Part1](q1/classObjectUML.md)
  
   [OOPAct_Part2](q1/classAttributesMethods.md)
+
+  [OOPAct_Part3](q1/classRelationships.md)
+
+  [OOPAct_Part4]
   
  
