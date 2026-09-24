@@ -32,7 +32,6 @@ class Song:
         self.artist = artist
         self.duration = duration
 
-
 class Playlist:
 
     def __init__(self, name, genre, total_duration, song_count):
@@ -53,11 +52,9 @@ class Playlist:
     def play_playlist(self):
         print("Playing playlist:", self.name)
 
-
 # Song Objects
 song1 = Song("Beautiful", "Bazzi", 3.0)
 song2 = Song("Sober", "Bazzi", 4.0)
-
 
 # Playlist Objects
 playlistYumi = Playlist("LAUV_ontop", "Pop", 0, 0)
@@ -69,7 +66,6 @@ print("name:", playlistYumi.name)
 print("genre:", playlistYumi.genre)
 print("total duration:", playlistYumi.totalDuration)
 
-
 print("Songs:")
 
 for song in playlistYumi.songs:
@@ -77,18 +73,18 @@ for song in playlistYumi.songs:
 
 print("song count:", len(playlistYumi.songs))
 
-
 playlistYumi.play_playlist()
 
 
 ## Test Run 
 ![cR_TestRun](<Screenshot 2026-09-24 190329.png>)
 
+
 ## Object Relationship Diagram
+![cR_ObjectRelationshipDiagram](<Screenshot 2026-09-24 193343.png>)
 
 
 ## Analysis 
-
 ### What is the association between your two classes? 
 The association between playlist and song is significant, as playlists contain songs. It can store multiple song objects to it which allows the playlit to manage and access the songs connected to it. 
 
