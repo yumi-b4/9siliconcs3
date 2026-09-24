@@ -24,8 +24,7 @@ I kept the name, creator, count and duration as part of the Playlist class.
 
 
 ## Updated UML Class Diagram 
-![iamgesclassDiagramSG5](imagesclassDiagramSG5.png)
-
+![Updated UML](<Screenshot 2026-09-24 194414.png>)
 
 
 ## Python Implementation
@@ -67,7 +66,7 @@ playlistYumi.play_playlist()
 
 
 ## Test Run 
-![TestRun_cA](image.png)
+![cA_TestRun](<Screenshot 2026-09-24 190329.png>)
 
 ## Object Diagram 
 ![cA_objectdiagram](image-1.png)
