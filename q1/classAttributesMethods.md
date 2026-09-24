@@ -30,67 +30,47 @@ I kept the name, creator, count and duration as part of the Playlist class.
 
 ## Python Implementation
 class Playlist:
-    def __init__(self, title, totalDuration, creator, songCount):
-        self.title = title
+
+    def __init__(self, name, genre, totalDuration, song_count):
+        self.name = name
+        self.genre = genre
         self.totalDuration = totalDuration
-        self.creator = creator
-        self.__songCount = songCount
+        self.song_count = song_count
 
-    def add_song(self, amount):
-        self.__songCount += amount
+    def add_song(self):
+        self.song_count += 1
 
-    def remove_song(self, amount):
-        if amount <= self.__songCount:
-            self.__songCount -= amount
+    def remove_song(self):
+        if self.song_count > 0:
+            self.song_count -= 1
         else:
             print("Cannot remove more songs than the playlist contains.")
 
-    def display_playlist(self):
-        print("Title:", self.title)
-        print("Total Duration:", self.totalDuration, "minutes")
-        print("Creator:", self.creator)
-        print("Song Count:", self.__songCount)
-
-    def get_song_count(self):
-        return self.__songCount
+    def play_playlist(self):
+        print("Playing playlist:", self.name)
 
 
-# Create two Playlist objects
-playlist1 = Playlist("Study Playlist", 120.5, "Maria", 10)
-playlist2 = Playlist("Workout Playlist", 75.0, "Maria", 15)
+# Object
+playlistYumi = Playlist("BazziTop", "Pop", 158.0, 63)
 
 
-# BEFORE
-print("--- BEFORE ---")
-print("Playlist 1:")
-playlist1.display_playlist()
+# Use the object
+print("name:", playlistYumi.name)
+print("genre:",playlistYumi.genre)
+print("total duration:", playlistYumi.totalDuration)
+print("song count:", playlistYumi.song_count)
 
-print()
-
-print("Playlist 2:")
-playlist2.display_playlist()
-
-
-# Change only Playlist 1
-print("\nAdding 3 songs to Playlist 1...")
-playlist1.add_song(3)
+playlistYumi.add_song()
+playlistYumi.remove_song()
+playlistYumi.play_playlist()
 
 
-# AFTER
-print("\n--- AFTER ---")
-print("Playlist 1:")
-playlist1.display_playlist()
-
-print()
-
-print("Playlist 2:")
-playlist2.display_playlist()
 
 ## Test Run 
-![Test Run](<Screenshot 2026-09-12 002741.png>)
+![Test Run](<Screenshot 2026-09-24 161449-1.png>)
 
 ## Object Diagram 
-![Object Diagram](objectDiagram.png.png)
+![Object Diagram](objectDiagram.png-1.png)
 
 ## Analysis 
 ### What did you make your chosen attribute private?

@@ -24,99 +24,11 @@ Explanation: A playlist can contain zero or more songs, which fits the system si
 ![ClassRelationshipDiagram](<Class Relationship Diagram.png>)
 
 ## Python Implementation
- ```python
-class Song:
-    def __init__(self, title, artist, duration):
-        self.title = title
-        self.artist = artist
-        self.duration = duration
-
-    def display_song(self):
-        print("Song:", self.title)
-        print("Artist:", self.artist)
-        print("Duration:", self.duration, "minutes")
-
-
-class Playlist:
-    def __init__(self, title, totalDuration, creator, songCount):
-        self.title = title
-        self.totalDuration = totalDuration
-        self.creator = creator
-        self.__songCount = songCount
-        self.songs = []
-
-    def add_song(self, song):
-        self.songs.append(song)
-        self.__songCount += 1
-        self.totalDuration += song.duration
-
-    def remove_song(self, song):
-        if song in self.songs:
-            self.songs.remove(song)
-            self.__songCount -= 1
-            self.totalDuration -= song.duration
-        else:
-            print("Song does not belong in the playlist.")
-
-    def play_playlist(self):
-        print("Playing:", self.title)
-
-        for song in self.songs:
-            print("-", song.title, "by", song.artist)
-
-    def display_playlist(self):
-        print("Title:", self.title)
-        print("Total Duration:", self.totalDuration, "minutes")
-        print("Creator:", self.creator)
-        print("Song Count:", self.__songCount)
-
-    def get_song_count(self):
-        return self.__songCount
-
-
-# Create Playlist object
-playlist1 = Playlist("Study Playlist", 122.5, "Yumi", 10)
-
-# Create Song objects
-song1 = Song("Beutiful", "Bazzi, Camila Cabello", 3:00)
-song2 = Song("Sober", "Bazzi", 3.44)
-song3 = Song("XXL", "LANY", 3:26)
-
-
-# BEFORE ASSOCIATION
-print("-BEFORE ASSOCIATION-")
-playlist1.display_playlist()
-
-print("Songs connected:", len(playlist1.songs))
-
-
-# BUILDING RELATIONSHIP
-print("\n- BUILDING RELATIONSHIP-")
-print("Adding songs to Playlist...")
-
-playlist1.add_song(song1)
-playlist1.add_song(song2)
-playlist1.add_song(song3)
-
-
-# AFTER ASSOCIATION
-print("\n-AFTER ASSOCIATION-")
-playlist1.display_playlist()
-
-print("\nRelated songs:")
-
-for song in playlist1.songs:
-    print("-", song.title, "by", song.artist)
-
-
-# PLAY PLAYLIST
-print("\n-PLAYLIST-")
-playlist1.play_playlist()
-```
+ 
 
 
 ## Test Run 
-![TestRun](<Screenshot 2026-09-12 014126.png>)
+
 
 ## Object Relationship Diagram
 ![Object Relationship Diagram](<Class Relationship Diagram.png>)
