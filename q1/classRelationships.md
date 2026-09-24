@@ -81,8 +81,7 @@ playlistYumi.play_playlist()
 
 
 ## Object Relationship Diagram
-![Object Relationship Diagram](<Screenshot 2026-09-24 194414-1.png>)
-
+![Object Relationship Diagram](<Screenshot 2026-09-24 193343.png>)
 
 ## Analysis 
 ### What is the association between your two classes? 
