@@ -22,7 +22,7 @@ Multiplicity: 1 : 0..*
 Explanation: A playlist can contain zero or more songs, which fits the system since a playlist can have different songs, and the number of songs can vary depending on the playlist. 
 
 ## UML Class Relationship Diagram 
-![cR_UMLClassRelationshipDiagram](<Screenshot 2026-09-24 164845.png>)
+![cR_UMLClass](<Screenshot 2026-09-24 164845.png>)
 
 ## Python Implementation
 class Song:
@@ -81,7 +81,7 @@ playlistYumi.play_playlist()
 
 
 ## Object Relationship Diagram
-![cR_ObjectRelationshipDiagram](<Screenshot 2026-09-24 193343.png>)
+![Object Relationship Diagram](<Screenshot 2026-09-24 194414-1.png>)
 
 
 ## Analysis 
