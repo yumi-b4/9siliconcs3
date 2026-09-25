@@ -26,32 +26,33 @@ Explanation: A playlist can contain zero or more songs, which fits the system si
 
 ## Python Implementation
 class Playlist:
-
     def __init__(self, name, genre, total_duration, song_count):
         self.name = name
         self.genre = genre
         self.totalDuration = total_duration
-        self.__soung_count = song_count
-
-    def add_song(self):
-        self.songs.append(song)
-
-    def remove_song(self):
-        if song in self.songs:
-            self.songs.remove
-        else:
-            print("Song is not in the playlist.")
+        self.songCount = song_count
 
     def play_playlist(self):
         print("Playing playlist:", self.name)
 
-playlistYumi = Playlist("LAUV_ontop", "Pop", 132.5, 15)
+
+class PlaylistYumi(Playlist):
+    def __init__(self, name, genre, total_duration, song_count):
+        super().__init__(name, genre, total_duration, song_count)
+
+
+# Objects playlistYumi
+playlistYumi = PlaylistYumi("LAUV_ontop", "Pop", 135.5, 15)
+
+print("Name:", playlistYumi.name)
+print("Genre:", playlistYumi.genre)
+print("Total duration:", playlistYumi.totalDuration)
+print("Song count:", playlistYumi.songCount)
 
 playlistYumi.play_playlist()
 
-
 ## Test Run 
-![cR_TestRun](cR_TestRun.png)
+![cR_TestRun](<Screenshot 2026-09-25 122041.png>)
 
 
 ## Object Relationship Diagram
