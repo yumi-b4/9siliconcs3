@@ -22,66 +22,40 @@ Multiplicity: 1 : 0..*
 Explanation: A playlist can contain zero or more songs, which fits the system since a playlist can have different songs, and the number of songs can vary depending on the playlist. 
 
 ## UML Class Relationship Diagram 
-![cR_UMLClass](q1\cR_ UML.png)
+[UMLClassRSDiagram](<cR_ UML.png>)
 
 ## Python Implementation
-class Song:
-
-    def __init__(self, title, artist, duration):
-        self.title = title
-        self.artist = artist
-        self.duration = duration
-
 class Playlist:
 
     def __init__(self, name, genre, total_duration, song_count):
         self.name = name
         self.genre = genre
         self.totalDuration = total_duration
-        self.songs = []
+        self.__soung_count = song_count
 
-    def add_song(self, song):
+    def add_song(self):
         self.songs.append(song)
 
-    def remove_song(self, song):
+    def remove_song(self):
         if song in self.songs:
-            self.songs.remove(song)
+            self.songs.remove
         else:
             print("Song is not in the playlist.")
 
     def play_playlist(self):
         print("Playing playlist:", self.name)
 
-# Song Objects
-song1 = Song("Beautiful", "Bazzi", 3.0)
-song2 = Song("Sober", "Bazzi", 4.0)
-
-# Playlist Objects
-playlistYumi = Playlist("LAUV_ontop", "Pop", 0, 0)
-
-playlistYumi.add_song(song1)
-playlistYumi.add_song(song2)
-
-print("name:", playlistYumi.name)
-print("genre:", playlistYumi.genre)
-print("total duration:", playlistYumi.totalDuration)
-
-print("Songs:")
-
-for song in playlistYumi.songs:
-    print(song.title, "-", song.artist, "-", song.duration)
-
-print("song count:", len(playlistYumi.songs))
+playlistYumi = Playlist("LAUV_ontop", "Pop", 132.5, 15)
 
 playlistYumi.play_playlist()
 
 
 ## Test Run 
-![cR_TestRun](q1\cR_TestRun.png)
+![cR_TestRun](cR_TestRun.png)
 
 
 ## Object Relationship Diagram
-![Object Relationship Diagram](q1\cR_ ORSDiagram.png)
+![Object Relationship Diagram](<cR_ ORSDiagram.png>)
 
 ## Analysis 
 ### What is the association between your two classes? 

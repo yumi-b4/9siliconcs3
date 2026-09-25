@@ -9,11 +9,15 @@ Description: It will act as a representation of a musical track that can be play
 
 ## Properties
 
-Property        Data Type       Description
-title           string          Title of the playlist 
-totalDuration   double          How long does the playlist play for
-creator         string          Who created the playlist
-songCount       int             Amount of songs within the playlist
+┌───────────────┬────────────┬───────────────────────────────┐
+│ Property      │ Data Type  │ Description                   │
+├───────────────┼────────────┼───────────────────────────────┤
+│ title         │ string     │ Name of the playlist          │
+│ totalDuration │ double     │ Total length of the playlist  │
+│ creator       │ string     │ Person who made the playlist  │
+│ songCount     │ int        │ Number of songs in playlist   │
+└───────────────┴────────────┴───────────────────────────────┘
+
 
 ## Methods
 
@@ -24,18 +28,18 @@ playPlaylist()  Starts playing the playlist
 
 ## Class Diagram 
 
-┌──────────────────────────────┐
-│           Playlist           │
-├──────────────────────────────┤
-│ title  : String              │
-│ totalDuration : double       │
-│ creator : string             │
-│ songCount : int              │
-├──────────────────────────────┤
-│ addSong(song : String)       │
-│ removeSong(song : String)    │
-│ playPlaylist()               │
-└──────────────────────────────┘
+┌─────────────────────────────────────┐
+│              Playlist               │
+├─────────────────────────────────────┤
+│ title : String                      │
+│ totalDuration : double              │
+│ creator : String                    │
+│ songCount : int                     │
+├─────────────────────────────────────┤
+│ addSong(song : String)              │
+│ removeSong(song : String)           │
+│ playPlaylist()                      │
+└─────────────────────────────────────┘
 
 ## Design Explanation 
 ### Why did you choose this class?

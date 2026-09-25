@@ -24,7 +24,7 @@ I kept the name, creator, count and duration as part of the Playlist class.
 
 
 ## Updated UML Class Diagram 
-![Updated UML](<Screenshot 2026-09-24 194414.png>)
+![Updated UML](cA_UpdatedUML.png)
 
 
 ## Python Implementation
@@ -66,10 +66,10 @@ playlistYumi.play_playlist()
 
 
 ## Test Run 
-![cA_TestRun](<Screenshot 2026-09-24 190329.png>)
+![cA_TestRun](cA_TestRun.png)
 
 ## Object Diagram 
-![cA_objectdiagram](image-1.png)
+![cA_objectdiagram](cA_imagesclassDiagramSG5.png)
 
 ## Analysis 
 ### What did you make your chosen attribute private?
