@@ -18,5 +18,7 @@ S.Y. 2026 - 2027
   [OOPAct_Part3](q1/classRelationships.md)
 
   [OOPAct_Part4]
+
+## Quarter 2
+  [Encapsulation](q2/sg8_encapsulation.py)
   
- 
