@@ -16,10 +16,45 @@ class publication:
         self.author = author
 
     def display_data(self):
-        print("Title: ", self.title)
-        print("Autor: ", self.author)
+        print("TItle: ", self.title)
+        print("Author: ", self.author)
 
 class book(publication):
-
-
+    def __init__(self, title, author, num_pages):
+        super().__init__(title, author)
+        self.num_pages = num_pages
     
+    def get_num_pages(self):
+        return self.num_pages
+    
+    def set_num_pages(self, num_pages):
+        self.num_pages = num_pages
+
+    def display_data(self):
+        super.display_data()
+        print("Number of Pages: " , self.num_pages)
+
+class magazine(publication): 
+    def __init__(self, title, author, issue_num):
+        super().__init__(title, author)
+        self.issue_num = issue_num
+
+    def display_data(self):
+        super.display_data()
+        print("Issue Number: " , self.issue_num)
+
+    def get_issue_num(self):
+        return self.issue_num
+
+    def set_issue_num(self, issue_num):
+        self.issue_num = issue_num
+
+p1 = publication("Harry Potter and the Philosopher's Stone", "J.K. Rowling")
+b1 = book("Princess of Souls", "Alexandra Christo", 401)
+m1 = magazine("Vogue", "Various Authors", 150)
+
+p1.display_data()
+print()
+b1.display_data()
+print()
+m1.display_data()
