@@ -22,3 +22,6 @@ S.Y. 2026 - 2027
 ## Quarter 2
   [Encapsulation](q2/sg8_encapsulation.py)
   
+  [Inheritance](q2/sq9_inheritance)
+
+  [Method Overriding](q2/sq10_method overriding)
