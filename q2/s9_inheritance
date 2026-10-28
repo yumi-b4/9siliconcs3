@@ -1,0 +1,83 @@
+# Creates a class called Publication
+class Publication:
+# The constructor where it runs when the object is created 
+  def __init__(self, title, author):
+# Stored the informattions or data inside the object
+      self.__title = title
+      self.__author = author
+
+# Lets you retrive the title without calling a method
+  @property
+# Defines the getter for the title attribute
+  def title(self):
+      return self.__title
+# Lets you change the title without calling a method
+  @title.setter
+  def title(self, title):
+    self.__title = title
+$ Defines the getter for the author attribute
+  @property
+  def author(self):
+      return self.__author 
+# Lets you change the author without calling a method
+  @author.setter
+  def author(self, author):
+    self.__author = author
+# This tells the object how to display its information
+  def display_info(self):
+    print("Title:", self.title)
+    print("Author:", self.author)
+
+# A class that inherits the Publication class
+class Book(Publication):
+# Constructor, used when the object is created
+  def __init__(self, title, author, num_pages):
+# It inherits the attributes and methods of the Publication class
+    super().__init__(title, author)
+# Creates a new attribute that stores the number of pages of a book
+    self.num_pages = num_pages
+# Gives a condition that the number of pages must be a positive number
+    if num_pages <= 0:
+      print("The number of pages cannot be negative.")
+    else:
+      self.num_pages = num_pages
+# This tells the object on how to display the data or information
+  def display_info(self):
+    super().display_info()
+    print("Number of Pages:", self.num_pages)
+
+# A  class that inherits the Publication class
+class Magazine(Publication):
+# Constructor, used when the object is created
+  def __init__(self, title, author, issue_num):
+# It inherits the attributes and methods of the Publication class
+    super().__init__(title, author)
+    self.issue_num = issue_num
+
+# Gives a condition that the issue number must be a positive number
+    if issue_num <= 0:
+      print("The issue number cannot be negative.")
+    else:
+      self.issue_num = issue_num
+# This tells the object on how to display the data or information
+  def display_info(self):
+    super().display_info()
+    print("Issue number:", self.issue_num)
+
+# Creates objects of the Publication, Book, and Magazine classes
+pub1 = Publication("El Filibusterismo", "Jose Rizal")
+pub2 = Publication("Noli Me Tangere", "Jose Rizal")
+
+book1 = Book("Ibong Adarna", "Anonymous", 150)
+book2 = Book("Princes of Souls", "Alexandra Christo", 401)
+
+mag1 = Magazine("Science Today", "Ana Cruz", 5)
+mag2 = Magazine("VOGUE", "Conde Nast", 300)
+
+# Creates a list of objects 
+library_items = [pub1, pub2, book1, book2, mag1, mag2]
+
+# Creates a loop that goes throught the objects one by one and calls the display_info method of each object to be able to display the data of each onject
+for item in library_items:
+  item.display_info()
+  print()
