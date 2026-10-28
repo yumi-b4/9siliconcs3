@@ -24,4 +24,4 @@ S.Y. 2026 - 2027
   
   [Inheritance](q2/sq9_inheritance)
 
-  [Method Overriding](q2/sq10_method overriding)
+  [Method Overriding](q2/sg10_method overriding)
