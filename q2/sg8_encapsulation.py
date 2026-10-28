@@ -19,14 +19,18 @@ class BankAccount:
 # setters (changes information)
 # self.__account_num and self.__balance acts as a save button where informations are saved to that specific account.
 # lets you change the account num
-  def set_account_num(self, account_num):
+
+  @account_num.setter
+  def account_num(self, account_num):
     self.__account_num = account_num
 
 
 # lets you change the balance of the account
 # checks if balance is negative or positive, as the balance cannnot have a negative value
 # the print statements displays a message weather the balance is negatice or positive 
-  def set_balance(self, balance):
+  
+  @balance.setter
+  def balance(self, balance):
     if balance >= 0: 
        self.__balance = balance
     else:
@@ -36,10 +40,13 @@ class BankAccount:
 # getters (retrieves information)
 # this lets you get or view the informations
 # return means giving the value back
-  def gt_account_num(self):
+  @property
+  def account_num(self):
     return self.__account_num
 
-  def gt_balance(self):
+#access the method like an attribute 
+  @property 
+  def balance(self):
     return self.__balance
 
 # this creates an account named "account1"
@@ -48,15 +55,15 @@ account1 = BankAccount("87654321", 9999)
 
 
 # this displlays the information
-print("Account Number: ", account1.gt_account_num())
-print("Accounts' Balance: ", account1.gt_balance())
+print("Account Number: ", account1.account_num)
+print("Accounts' Balance: ", account1.balance)
 
 # This changes the values of the account num and the balance
-account1.set_account_num(87654321)
-account1.set_balance(9876)
+account1.account_num = "87654321"
+account1.balance = 9876
 
 # Displays the updated data/information
-print("Updated Account Number: ", account1.gt_account_num())
-print("Updated Balance: ", account1.gt_balance())
+print("Updated Account Number: ", account1.account_num)
+print("Updated Balance: ", account1.balance)
 
 

@@ -1,0 +1,68 @@
+# Creates a class named Animal
+class Animal:
+# The defining of a function
+  def __init__(self, name):
+# Saves the object's stored name
+    self.name = name
+# Defines a method named eat.
+  def eat(self):
+# Warns the code to do nothing at the moment
+    pass
+# Defines a method named make_sound.
+  def make_sound(self):
+# Tells the code/ Python not to do anything for now.
+    pass
+
+# Creates a class callter Lion
+# The new class inherits from the Animal class
+class Lion(Animal):
+# Gives the lion its own eat method
+  def eat(self):
+# Displays a message on the output
+    print(self.name, "eats fresh meat.")
+
+  def make_sound(self):
+# Gives the lion its own make_sound method
+    print(self.name, "roars loudly.")
+# Displays a message on the output
+
+
+# Creates a class called Lion
+# The new class inherits from the Animal class
+class Monkey(Animal):
+# Gives the lion its own eat method
+  def eat(self):
+    print(self.name, "eats banana.")
+    
+# Gives the lion its own make_sound method
+  def make_sound(self):
+#  Gives the lion its own make_sound method
+    print(self.name, "chatters.")
+# Displays a message on the output
+
+# Creates a class called Lion
+# The new class inherits from the Animal class
+class Elephant(Animal):
+# Gives the lion its own eat method
+  def eat(self):
+# Displays a message on the output
+    print(self.name, "eats grass and fruits.")
+# Displays a message on the output
+  def make_sound(self):
+    print(self.name, "trumpets")
+
+# Actual objects 
+animal1 = Lion("Leo")
+animal2 = Monkey("Bubbles")
+animal3 = Elephant("Bumbo")
+
+# Objects in a list 
+animals = [animal1, animal2, animal3]
+
+# A for loop that goes through the list one object at a time
+for animal in animals:
+# calls the eat() method of the current object
+  animal.eat()
+# calls the make_sound() method of the current object
+  animal.make_sound()
+  print()
