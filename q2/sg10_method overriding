@@ -16,34 +16,33 @@ class Animal:
 # Creates a class callter Lion
 # The new class inherits from the Animal class
 class Lion(Animal):
-# Gives the lion its own eat method
-  def eat(self):
-# Displays a message on the output
-    print(self.name, "eats fresh meat.")
 
+  def __init__(self, name):
+    super().__init__(name)
+  def eat(self):
+        print(self.name, "eats fresh meat.")
   def make_sound(self):
-# Gives the lion its own make_sound method
     print(self.name, "roars loudly.")
-# Displays a message on the output
+
 
 
 # Creates a class called Lion
 # The new class inherits from the Animal class
 class Monkey(Animal):
-# Gives the lion its own eat method
+
+  def __init__(self, name):
+    super().__init__(name)
   def eat(self):
     print(self.name, "eats banana.")
-    
-# Gives the lion its own make_sound method
   def make_sound(self):
-#  Gives the lion its own make_sound method
     print(self.name, "chatters.")
-# Displays a message on the output
+
 
 # Creates a class called Lion
 # The new class inherits from the Animal class
 class Elephant(Animal):
-# Gives the lion its own eat method
+  def __init__(self, name):
+    super().__init__(name)
   def eat(self):
 # Displays a message on the output
     print(self.name, "eats grass and fruits.")
