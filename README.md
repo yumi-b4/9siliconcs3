@@ -22,11 +22,11 @@ S.Y. 2026 - 2027
 ## Quarter 2
   [Encapsulation](q2/sg8_encapsulation.py)
   
-  [Inheritance](q2/sg9_inheritance)
+  [Inheritance](q2/sg9_inheritance.py)
 
-  [Method Overriding](q2/sg10_method_overriding)
+  [Method Overriding](q2/sg10_method_overriding.py)
 
-  [Polymorphism (Patient)](q2/sg11_polymorphism)
+  [Polymorphism (Patient)](q2/sg11_polymorphism.py)
 
-  [Polymorphism (Car, Boat, Drone)](q2/sg11_polymorphism2)
+  [Polymorphism (Car, Boat, Drone)](q2/sg11_polymorphism2,py)
   
