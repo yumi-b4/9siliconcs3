@@ -28,5 +28,5 @@ S.Y. 2026 - 2027
 
   [Polymorphism (Patient)](q2/sg11_polymorphism.py)
 
-  [Polymorphism (Car, Boat, Drone)](q2/sg11_polymorphism2,py)
+  [Polymorphism (Car, Boat, Drone)](q2/sg11_polymorphism2.py)
   
